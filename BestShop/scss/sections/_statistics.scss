@@ -1,0 +1,105 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+.statistics {
+}
+
+.statistics-box {
+  width: 80%;
+}
+
+.statistics-title {
+  font-family:$raleway;
+  font-size: 36px;
+  font-weight: 400;
+  margin: 100px 0;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 100px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.statistics-circle {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle-one {
+  background:$acentColor1;
+}
+
+.circle-two {
+  background:$mainColor;
+}
+
+.circle-three {
+  background:$acentColor2;
+}
+
+
+.circle-one::after {
+  content: url("../assets/Person.svg");
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
+.circle-two::after {
+  content: url("../assets/Eye.svg");
+  position: absolute;
+  left: 30%;
+  top: 25%;
+}
+
+.circle-three::after {
+  content: url("../assets/Catalog.svg");
+  position: absolute;
+  left: 50%;
+  top: 10%;
+}
+
+.statistics-result {
+  font-family:$opensSans;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.statistics-text {
+  color: #A5A5A5;
+  font-family:$raleway;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  max-width: 120px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  .column {
+    margin-bottom: 50px;
+  }
+
+  .statistics-title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+}

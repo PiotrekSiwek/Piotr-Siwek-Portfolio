@@ -1,0 +1,244 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+#calculator {
+  background: #F7F7F7;
+  padding: 80px;
+  font-family: $opensSans;
+}
+
+.calculator-title {
+  font-family: $raleway;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+
+.form-list-box {
+  display: flex;
+  justify-content: center;
+
+
+  .calculator-form {
+    margin-right: 30px;
+    width: 35%;
+  }
+
+  .calculator-summary {
+    margin-left: 30px;
+    width: 35%;
+  }
+}
+
+.warning {
+  position: relative;
+
+  &::after {
+    content: "(max 3 numbers!)";
+    width: 150px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    color: #A5A5A5;
+    font-family: $opensSans;
+    border-radius: 5px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: visible;
+  }
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  border: $mainColor 2px solid;
+
+  &::placeholder {
+    color: #A5A5A5;
+    font-family: $raleway;
+    font-size: 14px;
+  }
+
+}
+
+.calculator-select {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  border: $mainColor 2px solid;
+  background: white;
+  position: relative;
+}
+
+.select-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #A5A5A5;
+  font-family: $raleway;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.fa-arrow-alt-circle-down {
+  color: $mainColor;
+  font-size: 20px;
+  margin-left: 62%;
+}
+
+.fa-arrow-alt-circle-down.show {
+  transform: rotate(180deg);
+}
+
+.select-dropdown {
+  display: block;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  border: $acentColor1 2px solid;
+  padding: 10px 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  cursor: pointer;
+  left: -2px;
+  top: 55px;
+  visibility: hidden;
+
+  .select-list {
+    padding: 10px;
+
+    &:hover {
+      transform: translate(10px) scale(1.07);
+    }
+  }
+}
+
+.select-dropdown.show {
+  visibility: visible;
+
+  .select-list {
+  }
+}
+
+.calculator-checkbox {
+  display: flex;
+  align-items: center;
+  color: #A5A5A5;
+  font-family: $raleway;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#first-checkbox {
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+label[for="rental"],
+label[for="account"] {
+  margin-left: 20px;
+}
+
+
+.checkbox-color {
+  background: white;
+  width: 23px;
+  height: 23px;
+  border-radius: 4px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+}
+
+
+.list-item {
+  background: $acentColor2;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  margin-bottom: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 10px 15px;
+  visibility: hidden;
+}
+
+.display {
+  visibility: visible;
+}
+
+.item-price {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#total-price {
+  width: 50%;
+  border-radius: 6px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, .16);
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $mainColor;
+  padding: 10px 15px;
+  color: white;
+  margin-left: 50%;
+}
+
+.total-price {
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+  #calculator {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .form-list-box {
+    flex-direction: column;
+    align-items: center;
+
+    .calculator-form {
+      width: 100%;
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    .calculator-summary {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  #calculator {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 500px){
+  #calculator {
+    padding: 80px 0;
+  }
+}

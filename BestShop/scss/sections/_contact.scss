@@ -1,0 +1,183 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+.contact {
+  padding-top: 100px;
+}
+
+.contact-box {
+  display: flex;
+  width: 80%;
+  margin-bottom: 70px;
+}
+
+.contact-data {
+  margin-right: 50px;
+  width: 400px;
+}
+
+.contact-title {
+  font-family:$raleway;
+  font-weight: 400;
+  font-size: 49px;
+}
+
+.contact-text {
+  font-family:$opensSans;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 25px;
+}
+
+.contact-data-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.contact-email {
+  color: #A5A5A5;
+  font-family:$opensSans;
+  font-weight: 400;
+  font-size: 16px;
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-number {
+  color: #A5A5A5;
+  font-family:$opensSans;
+  font-weight: 400;
+  font-size: 16px;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-email::before {
+  content: url("../assets/mail-icon.svg");
+  position: absolute;
+  left: -35px;
+  top: -5px;
+  cursor: pointer;
+}
+
+.contact-number::before {
+  content: url("../assets/phoneIcon.svg");
+  position: absolute;
+  left: -30px;
+  top: -5px;
+  cursor: pointer;
+}
+
+label[for="email"],
+label[for="name"],
+input[type="email"],
+input[type="text"] {
+  display: block;
+}
+
+label[for="email"],
+label[for="name"] {
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-family: $opensSans;
+  font-weight: 700;
+  color: $mainColor;
+}
+
+input[type="email"],
+input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #95989A;
+  margin-top: 20px;
+}
+
+.form-email {
+  margin-top: 45px;
+}
+
+label[for="accept"] {
+  color: #707070;
+  font-family:$opensSans;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.form-accept {
+  margin-top: 30px;
+  display: inline-flex;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid #95989A;
+  flex-shrink: 0;
+  margin-right: 15px;
+  background: white;
+
+  &:checked{
+    background: white;
+    color: black;
+  }
+}
+
+input[type="checkbox"]:checked {
+  background: url("../assets/Checkmark.svg") no-repeat center;
+
+}
+
+.btn-send {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-content: center;
+  padding: 20px 90px;
+  background: $mainColor;
+  border-radius: 35px;
+  box-shadow: 5px 10px 14px #07ACE629;
+  border: none;
+  color: #FFFFFF;
+  font-family: $opensSans;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.form-button {
+  text-align: right;
+}
+
+@media (max-width: 755px){
+  .contact-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-data{
+    margin-bottom: 70px;
+    width: 100%;
+    margin-left: 45px;
+  }
+
+  .contact-data-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-number{
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+}

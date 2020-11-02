@@ -1,0 +1,254 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+@import "scss/settings/mixins";
+
+.benefits {
+  background: #f7f7f7;
+  padding-top: 80px;
+}
+
+.benefit-row {
+  height: 370px;
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  margin-top: 40px;
+  padding: 30px 0;
+}
+
+.benefit-box {
+  width: 85%;
+}
+
+.benefit-box-one-texts {
+  max-width: 40%;
+  margin-left: 35px;
+}
+
+.benefit-title {
+  font-family:$raleway;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 65px;
+}
+
+.benefit-text {
+  font-family:$opensSans;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+.benefit-line-one {
+  @include benefitLine;
+  background:$acentColor1;
+
+}
+
+.benefit-line-two {
+  @include benefitLine;
+  background:$mainColor;
+
+}
+
+.benefit-line-three {
+  @include benefitLine;
+  background:$acentColor2;
+
+}
+
+.benefit-box-one-img {
+  position: relative;
+  margin-right: 120px;
+}
+
+.benefit-picture {
+  width: 380px;
+  height: 100%;
+  background: url("../assets/Macbook.png") no-repeat bottom;
+  background-size: contain;
+  position: relative;
+  z-index: 10;
+}
+
+.benefit-square {
+  width: 180px;
+  height: 180px;
+  border-radius: 41px;
+  background:$acentColor1;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 15%;
+  left: 55%;
+  z-index: 0;
+}
+
+
+.benefit-box-two-img {
+  position: relative;
+  margin-left: 70px;
+}
+
+.benefit-picture_2 {
+  width: 420px;
+  height: 320px;
+  background: url("../assets/iPhone.png");
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+}
+
+.benefit-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background:$mainColor;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+.benefit-box-two-texts {
+  max-width: 40%;
+  margin-right: 20px;
+}
+
+.benefit-title-place {
+  max-width: 60%;
+}
+
+
+.benefit-box-three {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  padding-bottom: 100px;
+}
+
+
+.benefit-box-three-picture {
+  width: 40%;
+  height: 370px;
+  background: $acentColor2 url("../assets/Trumpet.png") no-repeat 50% 70%;
+  background-size: 70%;
+  margin-left: 40px;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+
+.benefit-box-three-texts {
+  background: #FFFFFF;
+  max-width: 60%;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.benefit-title-set {
+  max-width: 60%;
+}
+
+
+
+@media (max-width: 1000px) {
+  .benefit-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .benefit-line-one,
+  .benefit-line-two,
+  .benefit-line-three {
+    display: none;
+  }
+}
+
+@media (max-width: 805px) {
+  .benefit-title-place {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 755px) {
+  .benefits {
+    padding-top: 40px;
+  }
+
+  .benefit-row {
+    height: 700px;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+    padding: 10px 0;
+  }
+
+  .benefit-box-one-img {
+    margin: 0 auto;
+
+  }
+
+  .benefit-picture {
+    height: 350px;
+  }
+
+  .benefit-square {
+    top: 22%;
+    left: 55%;
+  }
+
+  .benefit-box-one {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .benefit-box-one-texts {
+    max-width: 90%;
+  }
+
+  .benefit-box-two {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-box-two-texts {
+    max-width: 90%;
+    margin-left: 40px;
+
+  }
+  .benefit-title-place {
+    margin-top: 70px;
+    max-width: 80%;
+  }
+
+  .benefit-title-set {
+    max-width: 80%;
+  }
+
+  .benefit-box-three {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+  }
+
+  .benefit-box-three-texts {
+    max-width: 100%;
+    margin-bottom: 40px;
+    padding-bottom: 70px;
+  }
+
+  .benefit-box-three-picture {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .benefit-text{
+    margin-right: 20px;
+  }
+}
+
+
+

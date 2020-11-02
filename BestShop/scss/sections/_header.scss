@@ -1,0 +1,168 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+
+.header {
+  width: 100%;
+  height: 70px;
+  box-shadow: 0 3px 6px #00000029;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10000;
+}
+
+.menu {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-menu-logo {
+}
+
+.button-burger{
+  width: 30px;
+  height: 4px;
+  background:$mainColor;
+  margin: 2px;
+  transition: 1s;
+
+  &:nth-of-type(1){
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  &:nth-of-type(2){
+    transform: rotate(0deg);
+  }
+  &:nth-of-type(3){
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+
+.menu-button{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: none;
+  border: 0;
+  display: none;
+}
+
+.logo-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo-text {
+  color: $mainColor;
+  font-family:$raleway;
+  font-weight: 300;
+  font-size: 32px;
+  margin-left: 100px;
+}
+
+.page-menu {
+}
+
+.page-menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.page-menu-el {
+  padding: 0 50px;
+}
+
+.page-menu-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #A5A5A5;
+  font-family:$opensSans;
+  font-weight: 700;
+  font-size: 11px;
+  cursor: pointer;
+  padding: 27px 0;
+}
+
+.page-menu-link:hover {
+  border-bottom: 4px solid #08A6E4;
+  color: #000000;
+}
+
+@media (max-width: 1050px) {
+  .page-menu-el {
+    padding: 0 25px;
+  }
+  .logo-text {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .menu-button {
+    display: flex;
+  }
+
+  .menu-button.show {
+    .button-burger{
+      transition: 1s;
+      &:nth-of-type(1){
+        transform: translate(0%, 200%) rotate(-45deg);
+      }
+      &:nth-of-type(2){
+        transform: rotate(-45deg);
+      }
+      &:nth-of-type(3){
+        transform: translate(0%, -200%) rotate(45deg);
+      }
+    }
+  }
+
+  .page-menu-list {
+    position: fixed;
+    right: 0;
+    top:72px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    margin: 0;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    transition: 1s;
+    height: 1px;
+    border: 1px solid $mainColor;
+    overflow: hidden;
+    text-decoration: underline;
+  }
+
+  .page-menu-list.show {
+    top: 72px;
+    height: 210px;
+    padding: 40px 10px 10px;
+  }
+
+
+  .page-menu-link:hover {
+    border-bottom: transparent;
+    color: $mainColor;
+    opacity: 0.7;
+  }
+
+  .page-menu-link {
+    font-size: 15px;
+    display: inline-block;
+    padding: 8px 4px;
+    border: 2px solid $mainColor;
+    border-radius: 5px;
+    width: 120px;
+  }
+
+  .page-menu-el {
+    width: 50%;
+    text-align: center;
+  }
+}

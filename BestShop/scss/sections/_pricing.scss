@@ -1,0 +1,251 @@
+@import "scss/settings/fonts";
+@import "scss/settings/colors";
+
+
+.pricing {
+}
+
+.pricing-box {
+  width: 90%;
+}
+
+.pricing-title {
+  font-family:$raleway;
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.pricing-offer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 140px;
+}
+
+.pricing-offer-basic {
+  width: 370px;
+  height: 460px;
+  border: 1px solid $acentColor1;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.offer-title {
+  font-family:$raleway;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 40px;
+}
+
+.price {
+  font-family:$opensSans;
+  font-weight: 300;
+  font-size: 46px;
+  margin-top: 35px;
+}
+
+.price-color-basic {
+  color:$acentColor1;
+}
+
+.items-list-basic {
+  margin-top: 80px;
+}
+
+.items {
+  font-family:$opensSans;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 55px;
+  cursor: pointer;
+  border-radius: 23px;
+  font-family: $opensSans;
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.basic-btn {
+  background: $acentColor1;
+}
+
+.basic-el1::before,
+.basic-el2::before,
+.basic-el3::before {
+  content: url("../assets/Ckechmark-1.svg");
+  padding-right: 10px;
+}
+
+.basic-el4::before,
+.basic-el5::before {
+  content: url("../assets/Close.svg");
+  padding-right: 10px;
+}
+
+.pricing-offer-profession {
+  width: 400px;
+  height: 500px;
+  border: 1px solid $mainColor;
+  border-radius: 18px;
+  box-shadow: 5px 10px 27px #07ACE629;
+  text-align: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.price-color-profession {
+  color: $mainColor;
+}
+
+.price-subtitle {
+  display: inline-block;
+  font-family: $raleway;
+  font-weight: 700;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.items-list-profession {
+  margin-top: 68px;
+}
+
+.profession-el1::before,
+.profession-el2::before,
+.profession-el3::before,
+.profession-el4::before {
+  content: url("../assets/Ckechmark-1.svg");
+  padding-right: 10px;
+}
+
+.profession-el5::before {
+  content: url("../assets/Close.svg");
+  padding-right: 10px;
+}
+
+.profession-btn {
+  background: $mainColor;
+}
+
+.pricing-offer-premium {
+  width: 370px;
+  height: 460px;
+  border: 1px solid $acentColor2;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+  margin: 0 10px;
+}
+
+.price-color-premium {
+  color: $acentColor2;
+}
+
+
+.items-list-premium {
+  margin-top: 48px;
+}
+
+.premium-el1::before,
+.premium-el2::before,
+.premium-el3::before,
+.premium-el4::before,
+.premium-el5::before {
+  content: url("../assets/Ckechmark-1.svg");
+  padding-right: 10px;
+}
+
+.premium-btn {
+  background: $acentColor2;
+}
+
+@media (max-width: 755px) {
+  .pricing-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 90px;
+  }
+
+  .pricing-offer-basic,
+  .pricing-offer-premium{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 200px;
+    width: 100%;
+  }
+
+  .pricing-offer-profession{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 250px;
+    width: 100%;
+    min-width: 370px;
+  }
+
+  .items-list-basic,
+  .items-list-premium{
+    grid-column: 2 / 3;
+    grid-row: 1 / 4 ;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  .items-list-profession {
+    grid-column: 2 / 3;
+    grid-row: 1 / 4 ;
+    margin-top: 40px;
+    text-align: left;
+  }
+
+  .price-color-basic,
+  .price-color-premium{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3 ;
+    padding-bottom: 20px;
+  }
+
+  .price-color-profession {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding-bottom: 30px;
+  }
+
+  .price-subtitle-profession{
+    display: inline-block;
+    padding-bottom: 40px;
+
+  }
+
+  .price-subtitle-premium,
+  .price-subtitle-profession{
+    margin-top: 90px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .offer-title{
+    grid-column: 1 / 2;
+    grid-row: 1 / 3 ;
+    padding-top: 20px;
+  }
+}

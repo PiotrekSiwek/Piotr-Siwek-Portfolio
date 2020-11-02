@@ -1,0 +1,46 @@
+@import "scss/settings/fonts";
+
+
+.footer-box {
+  display: flex;
+  justify-content: space-between;
+  background: #F7F7F7;
+  box-shadow: 0 -5px 40px #00000029;
+  padding-bottom: 15px;
+}
+
+.footer-logo {
+  margin-top: 15px;
+}
+
+.footer-logo-correct {
+  font-size: 26px;
+}
+
+.footer-text {
+  color: #A5A5A5;
+  font-size: 11px;
+  font-family: $opensSans;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-left: 100px;
+}
+
+.footer-icons {
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  margin-right: 100px;
+}
+
+@media (max-width: 850px) {
+  .footer-text {
+    margin-left: 10px;
+  }
+
+  .footer-icons {
+    margin-right: 50px;
+  }
+}
